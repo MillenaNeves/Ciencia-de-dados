@@ -25,8 +25,6 @@ Preparação geométrica dos atributos e validação inicial do modelo kNN (k=5)
 * **Preservação de Dinâmicas:** Variáveis de geolocalização (latitude/longitude) e temporais não passaram por remoção de outliers para não apagar ocorrências reais da malha urbana (ex: madrugada ou bairros distantes).
 * **Resultados & Ilusão da Acurácia:** O modelo atingiu uma acurácia global alta (~91%), mas um **F1-Score Macro mediano (~0.49)**. A análise revelou que o kNN negligencia a classe minoritária devido ao desbalanceamento. As melhores combinações envolveram **Quantile Transformer (Normal)** e **Effect Encoding**.
 
-> 📌 **Nota de Esclarecimento Técnico:** > Na análise da Matriz de Confusão, são observadas apenas cerca de 10 ocorrências da classe `VÍTIMA FATAL`. Cumpre destacar que este número reflete estritamente o **subconjunto de teste (os 30% separados de forma estratificada via `stratify=y`)**. O dataset completo conta com aproximadamente 33 a 35 registros de óbitos no ano.
-
 ### Entrega 3 — Seleção de Features e Redução de Dimensionalidade
 * Aplicação de técnicas de seleção de atributos para remover ruídos e avaliar o impacto direto no desempenho do kNN.
 * Testes com redução de dimensionalidade utilizando abordagens como PCA para contornar a "maldição da dimensionalidade" gerada pela alta cardinalidade de atributos como bairros.
